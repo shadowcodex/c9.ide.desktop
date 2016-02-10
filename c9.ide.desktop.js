@@ -28,8 +28,6 @@ define(function(require, exports, module) {
                         if (err) return console.error(err);
                     });
                     
-                    process.unref();
-                    
                     proc.execFile("echo", {
                         args: ["VNC client running at https://$C9_HOSTNAME/vnc.html"]
                     }, function(err, stdout, stderr){
@@ -48,7 +46,7 @@ define(function(require, exports, module) {
                 },
                 exec: function(){
                     
-                    var vncpath = "https://" + c9.projectName + "/vnc.html";
+                    var vncpath = "https://" + c9.location + "/vnc.html";
                     tabManager.open({
                         path: vncpath,
                         editorType: "preview",
