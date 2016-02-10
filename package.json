@@ -1,0 +1,22 @@
+{
+  "name": "c9.ide.desktop",
+  "description": "Adds a desktop GUI to cloud9's ide using x11",
+  "version": "0.0.1",
+  "author": "Shannon Duncan",
+  "contributors": [
+    {
+      "name": "Shannon Duncan",
+      "email": "shannon@unrestrictedcoding.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shadowcodex/c9.ide.desktop"
+  },
+  "plugins": {
+    "c9.ide.desktop": {}
+  },
+  "installer": "install.js",
+  "categories": ["miscellaneous"],
+  "licenses": ["MIT"]
+}
