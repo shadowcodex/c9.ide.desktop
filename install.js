@@ -46,5 +46,7 @@ define(function(require, exports, module) {
         session.start();
         
     };
+    
+    module.exports.version = 1; 
 
 });

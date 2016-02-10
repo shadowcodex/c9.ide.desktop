@@ -53,9 +53,3 @@ The Open Desktop Command will open the VNC connection in a new tab allowing you 
 4) Profit with your new desktop enviornment in c9!
 
 ![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/assets/c9_desktop_profit.png)
-
-# Keyboard Not Working?
-
-If you can click on things and your keyboard isn't working then click the following icon circled in red:
-
-![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/assets/fix_keyboard.png)
