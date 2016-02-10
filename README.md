@@ -28,7 +28,7 @@ Go to `Cloud9>Preferences>Experimental>SDK` and enable the two toggles for `Load
 
 There are two commands that are built into the editor. These are accessible under the view menu at the top of the ide.
 
-![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.print/master/c9_view.png)
+![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/c9_view.png)
 
 The Restart Command will run the supervisor command and start the system.
 
