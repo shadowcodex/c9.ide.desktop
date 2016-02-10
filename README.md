@@ -30,10 +30,32 @@ Go to `Cloud9>Preferences>Experimental>SDK` and enable the two toggles for `Load
 
 There are two commands that are built into the editor. These are accessible under the view menu at the top of the ide.
 
-![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/c9_view.png)
+![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/assets/c9_view.png)
 
-The Restart Command will run the supervisor command and start the system.
+The Start Command will run the start the x11 vnc server. **YOU ONLY NEED TO DO THIS ONCE**
 
 The Open Desktop Command will open the VNC connection in a new tab allowing you to view your x11 desktop.
 
-# Screen Shots
+![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/assets/c9_view_commands.png)
+
+1) Once you have the desktop open then click connect. **NO PASSWORD IS NEEDED**
+
+![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/assets/c9_vnc_connect.png)
+
+2) Once you connect you should see a screen like so...
+
+![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/assets/c9_desktop.png)
+ 
+3) Then to access programs just use the right click menu **(Right Click anywhere on the black desktop)**
+
+![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/assets/c9_desktop_menu.png)
+
+4) Profit with your new desktop enviornment in c9!
+
+![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/assets/c9_desktop_profit.png)
+
+# Keyboard Not Working?
+
+If you can click on things and your keyboard isn't working then click the following icon circled in red:
+
+![c9 view menu location](https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/assets/fix_keyboard.png)

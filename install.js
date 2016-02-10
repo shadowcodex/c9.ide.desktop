@@ -31,15 +31,15 @@ define(function(require, exports, module) {
             "bash": 'wget https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/supervisord.conf'
         })
         
-        session.install({
-            "name": "supervisor",
-            "description": "Start supervisor and noVNC",
-            "cwd": "/home/ubuntu",
-            "optional": false
-        },
-        {
-            "bash": 'sudo supervisord -c supervisord.conf >> supervisorlog.txt'
-        });
+        // session.install({
+        //     "name": "supervisor",
+        //     "description": "Start supervisor and noVNC",
+        //     "cwd": "/home/ubuntu",
+        //     "optional": false
+        // },
+        // {
+        //     "bash": 'sudo supervisord -c supervisord.conf >> supervisorlog.txt'
+        // });
         
         
         

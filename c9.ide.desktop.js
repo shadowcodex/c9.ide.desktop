@@ -18,15 +18,32 @@ define(function(require, exports, module) {
         var emit = plugin.getEmitter();
         
         function load() {
+            ////////////////////////////////////////////////////////////////////
+            /////////////// Start Supervisor Command ///////////////////////////
+            ////////////////////////////////////////////////////////////////////
             commands.addCommand({
                 name: "restart_supervisor",
                 exec: function(){
-                    proc.spawn("supervisor", {
-                        args: ["-c supervisor.conf"],
+                    proc.spawn("supervisord", {
+                        args: ["-c", "supervisord.conf"],
                         cwd: "/home/ubuntu"
-                    }, function(err, stdout, stderr){
+                    }, function(err, process){
                         if (err) return console.error(err);
-                    });
+                        
+                        process.stderr.on("data", function(chunk) {
+                            console.log(chunk); 
+                        });
+                        
+                        process.stdout.on("data", function(chunk) {
+                            console.log(chunk); 
+                        });
+                        
+                        process.on("exit", function(code) {
+                            console.log("novnc stopped"); 
+                        });
+                        
+                        process.unref();
+                    })
                     
                     proc.execFile("echo", {
                         args: ["VNC client running at https://$C9_HOSTNAME/vnc.html"]
@@ -38,6 +55,9 @@ define(function(require, exports, module) {
                 }
             }, plugin);
             
+            ////////////////////////////////////////////////////////////////////
+            /////////////// Open Desktop In New Tab  ///////////////////////////
+            ////////////////////////////////////////////////////////////////////
             commands.addCommand({
                 name: "open_desktop_in_new_tab",
                 bindKey: { 
@@ -45,29 +65,37 @@ define(function(require, exports, module) {
                     win: "Ctrl-Shift-Alt-D" 
                 },
                 exec: function(){
-                    
-                    var vncpath = "https://" + c9.location + "/vnc.html";
+                    var vncpath = "https://" + c9.hostname + "/vnc.html";
                     tabManager.open({
-                        path: vncpath,
-                        editorType: "preview",
-                        focus: true,
+                        value: vncpath,
+                        editorType: "urlview",
                         active: true,
-                        pane: tabManager.getPanes()[1]
+                        title: "Desktop",
+                        pane: tabManager.getPanes()[0],
+                        document   : {
+                            urlview : {
+                                backgroundColor : "#FF0000",
+                                dark            : true
+                            }
+                        }
                     }, function(err, tab){
                         if (err) return console.error(err);
-                        
-                    });
+                        tab.title = "Desktop";
+                    })
                 }
-            })
+            }, plugin);
             
-            
-            menus.addItemByPath("View/Desktop/Restart Desktop", new ui.item({
+            ////////////////////////////////////////////////////////////////////
+            /////////////// Add Commans To View Menu ///////////////////////////
+            ////////////////////////////////////////////////////////////////////
+            menus.addItemByPath("View/Start Desktop", new ui.item({
                 command: "restart_supervisor"
-            }), 300, plugin);
+            }), 101, plugin);
             
-            menus.addItemByPath("View/Desktop/Open Desktop", new ui.item({
+            
+            menus.addItemByPath("View/Open Desktop", new ui.item({
                 command: "open_desktop_in_new_tab"
-            }), 301, plugin);
+            }), 102, plugin);
         }
         
         /***** Methods *****/
