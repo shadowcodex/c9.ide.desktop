@@ -22,8 +22,8 @@ define(function(require, exports, module) {
                 name: "restart_supervisor",
                 exec: function(){
                     proc.spawn("supervisor", {
-                        args: ["-c supervisor.conf"]
-                        
+                        args: ["-c supervisor.conf"],
+                        cwd: "/home/ubuntu"
                     }, function(err, stdout, stderr){
                         if (err) return console.error(err);
                     });
