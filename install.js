@@ -38,7 +38,7 @@ define(function(require, exports, module) {
             "optional": false
         },
         {
-            "bash": 'sudo supervisord -c supervisord.conf'
+            "bash": 'sudo supervisord -c supervisord.conf >> supervisorlog.txt'
         });
         
         
