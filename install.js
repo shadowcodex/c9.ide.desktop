@@ -14,9 +14,6 @@ define(function(require, exports, module) {
         },
         {
             "bash": 'git clone git://github.com/kanaka/noVNC'
-        },
-        {
-            "bash": 'echo VNC client running at https://$C9_HOSTNAME/vnc.html'
         });
         
     };
