@@ -28,7 +28,7 @@ define(function(require, exports, module) {
             "option": false
         },
         {
-            "bash": 'sudo echo -e "[supervisord]\nnodaemon=true\n\n[program:xvfb]\ncommand=/usr/bin/Xvfb :99 -screen 0 1280x864x16 -ac -pn -noreset\n\n[program:x11vnc]\ncommand=x11vnc -shared -rfbport 5900 -display :99\n\n[program:novnc]\ncommand=/bin/bash -c \"/home/ubuntu/noVNC/utils/launch.sh --vnc localhost:5900 --listen %\\\(ENV_PORT\\\)s\"\n\n[program:fluxbox]\ncommand=fluxbox\nenvironment=DISPLAY=\":99\"" > supervisord.conf'
+            "bash": 'wget https://raw.githubusercontent.com/shadowcodex/c9.ide.desktop/master/supervisord.conf'
         })
         
         session.install({
