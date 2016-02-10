@@ -14,6 +14,9 @@ define(function(require, exports, module) {
         },
         {
             "bash": 'git clone git://github.com/kanaka/noVNC'
+        },
+        {
+            "bash": 'supervisord -c supervisord.conf'
         });
         
     };
