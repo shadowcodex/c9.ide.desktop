@@ -25,6 +25,11 @@ Go to `Cloud9>Preferences>Experimental>SDK` and enable the two toggles for `Load
 
 **Please Note: That this will install needed packages automatically. Any issues please file an issue here at github**
 
+Does it not work when you clikc 'start desktop'? Make sure you have added websocketfy
+
+```
+$> sudo apt-get install websockify
+```
 
 # Usage
 
