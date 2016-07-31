@@ -3,6 +3,12 @@ Adds a desktop GUI to cloud9's ide using x11.
 
 **Please Note: That this plugin only works on ubuntu systems if using the c9sdk and the official c9.io platform**
 
+# Installation Bug with Cloud9's Plugin System... (npmlog)
+
+Currently as far as I can tell, all plugin installs are failing on cloud9's system. They say they might know what caused it, but if you try to install this and get an error about 'NPMLOG', that is a known issue. Please report the issue and troubles on cloud9's thread for this: https://community.c9.io/t/cannot-find-module-npmlog-when-trying-to-install-scala-plugin-for-cloud9/6846/6
+
+That's the most we can do until they get this fixed. If they fix it, I'll update this section of the readme.
+
 # What is this used for
 Any programs that need a gui interface to write out to, such as Python's turtle package, can use this approach to develop and test in cloud9.
 
