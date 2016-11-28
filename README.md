@@ -3,23 +3,27 @@ Adds a desktop GUI to cloud9's ide using x11.
 
 **Please Note: That this plugin only works on ubuntu systems if using the c9sdk and the official c9.io platform**
 
-# Installation Bug with Cloud9's Plugin System... (npmlog)
+## Installation Bug with Cloud9's Plugin System... (npmlog)
 
-Currently as far as I can tell, all plugin installs are failing on cloud9's system. They say they might know what caused it, but if you try to install this and get an error about 'NPMLOG', that is a known issue. Please report the issue and troubles on cloud9's thread for this: https://community.c9.io/t/cannot-find-module-npmlog-when-trying-to-install-scala-plugin-for-cloud9/6846/6
+This looks to be fixed.
 
-That's the most we can do until they get this fixed. If they fix it, I'll update this section of the readme.
+# Update 11/28/2016
 
-# What is this used for
+I'll be working on updating this plugin soon in the published repo on c9's system. Once done, the cli install should work correctly again. C9 has had issues with publishing and installing plugins. It looks like this may be fixed so I'll get this all packaged up and sent over.
+
+No ETA on this, but it is officially on my list of todo's!
+
+## What is this used for
 Any programs that need a gui interface to write out to, such as Python's turtle package, can use this approach to develop and test in cloud9.
 
 
-# Commands
+## Commands
 
 Open Desktop in new Tab:
 MAC: `COMMAND-SHIFT-ALT-D`
 WIN: `CTRL-SHIFT-ALT-D`
 
-# Installation
+## Installation
 
 use command `c9 install c9.ide.desktop` and then reload your editor.
 
@@ -35,7 +39,7 @@ Does it not work when you clikc 'start desktop'? Make sure you have added websoc
 $> sudo apt-get install websockify
 ```
 
-# Usage
+## Usage
 
 There are two commands that are built into the editor. These are accessible under the view menu at the top of the ide.
 
