@@ -1,3 +1,5 @@
+[![Discord](https://img.shields.io/discord/630805507782868992.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/GghbTQA)
+
 # c9.ide.desktop
 Adds a desktop GUI to cloud9's ide using x11.
 
